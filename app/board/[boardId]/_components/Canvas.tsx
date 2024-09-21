@@ -382,7 +382,7 @@ const Canvas = ({ boardId }: CanvasProps) => {
     const layerIdsToColorSelection: Record<string, string> = {};
 
     for (const user of selections) {
-      const [connectionId, selection] = user;
+      const [connectionId, { selection }] = user;
 
       for (const layerId of selection) {
         layerIdsToColorSelection[layerId] = connectionIdToColor(connectionId);
