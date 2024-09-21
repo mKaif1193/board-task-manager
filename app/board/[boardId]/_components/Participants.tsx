@@ -18,7 +18,7 @@ const Participants = () => {
           <UserAvatar
             key={connectionId}
             borderColor={connectionIdToColor(connectionId)}
-            src={info?.avatar}
+            src={info?.picture}
             name={info?.name}
             fallback={info?.name?.[0] || "T"}
           />
@@ -27,11 +27,10 @@ const Participants = () => {
         {currentUser && (
           <UserAvatar
             borderColor={connectionIdToColor(currentUser.connectionId)}
-            src={currentUser?.info?.avatar}
+            src={currentUser?.info?.picture}
             name={`${currentUser?.info?.name} (You)`}
             // fallback={currentUser?.info?.name?.[0]}
             fallback={`${currentUser?.info?.name?.[0]}${currentUser?.info?.name?.split(" ")[1][0]}`}
-            // fallback={`${currentUser?.info?.name?.split(" ")[0][0]}${currentUser?.info?.name?.split(" ")[1][0]}`}
           />
         )}
 
